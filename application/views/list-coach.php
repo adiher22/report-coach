@@ -28,7 +28,7 @@
         </select>
     </div>
     <div class="form-group">
-       <button type="submit" class="btn btn-primary">Kirim</button>
+       <button type="submit" id="kirim" class="btn btn-primary">Kirim</button>
     </div>
 
     <script>
