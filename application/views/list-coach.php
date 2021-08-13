@@ -10,8 +10,9 @@
 <body>
 <div class="container mt-5">
      <h4>Penilaian coach dinamis dengan codeigniter 3 dan ajax</h4>
-    <div class="form-group">
-        <label for="sel1">Pilih Coach:</label>
+     <form action="<?= site_url('Penilaian') ?>" method="post">
+     <div class="form-group">
+        <label for="coach">Pilih Coach:</label>
         <select class="form-control" name="coach" id="coach">
             <option value="">--Pilih Coach--</option>
             <?php foreach($data as $coach ) : ?>
@@ -21,7 +22,7 @@
     </div>
 
     <div class="form-group">
-        <label for="sel1">Pilih Coache:</label>
+        <label for="coache">Pilih Coache:</label>
         <select class="form-control" name="coache" id="coache">
             <!-- Merk motor akan diload menggunakan ajax, dan ditampilkan disini -->
         <option value="">Tidak Tersedia</option>
@@ -30,7 +31,7 @@
     <div class="form-group">
        <button type="submit" id="kirim" class="btn btn-primary">Kirim</button>
     </div>
-
+     </form>
     <script>
 
      
@@ -53,12 +54,14 @@
                     for(i=0; i<data.length; i++){
                         html += '<option value='+data[i].id+'>'+data[i].name_coache+'</option>';
                     }
+                    html += '<option value="">Tidak Tersedia</option>';
                    $('#coache').html(html);
 
                 }
                 
             });
         });
+       
     </script>
 
 </div>

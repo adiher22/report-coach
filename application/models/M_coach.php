@@ -21,6 +21,14 @@ class M_coach extends CI_Model {
             ->get()
             ->result();
     }
+    public function coache($id)
+    {
+        $this->db->from('coache');
+        $this->db->where('id', $id);
+        $query = $this->db->get();
+        return $query;
+        
+    }
 
 }
 

@@ -10,7 +10,8 @@
 <body>
 <div class="container mt-5">
      <h4>Penilaian coach dinamis dengan codeigniter 3 dan ajax</h4>
-     <form action="">
+    <form action="">
+    <span id="name_coache" class="text-center mt-4 mb-5"><b> Nama Coache : <?= $coache['name_coache'] ?></b></span>
     <div class="form-group">
         <label for="sesi">Sesi (Angka)</label>
         <input type="number" id="sesi" name="sesi" class="form-control">
@@ -20,114 +21,94 @@
    
     <label for="">Komunikasi</label>
      <div class="form-group">
-        <div class="custom-control custom-radio custom-control-inline">
-            <label class="custom-control-label" for="customRadioInline1">1</label>
-            <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-            
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1">1</label>
         </div>
-       
-         <div class="custom-control custom-radio custom-control-inline">
-             <label class="custom-control-label" for="customRadioInline1">2</label>
-            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-            
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2">2</label>
         </div>
-         <div class="custom-control custom-radio custom-control-inline">
-             <label class="custom-control-label" for="customRadioInline1">3</label>
-            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-          
+         <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+            <label class="form-check-label" for="inlineRadio3">3</label>
         </div>
-         <div class="custom-control custom-radio custom-control-inline">
-             <label class="custom-control-label" for="customRadioInline1">4</label>
-            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-          
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+            <label class="form-check-label" for="inlineRadio3">4</label>
         </div>
-         <div class="custom-control custom-radio custom-control-inline">
-            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-             <label class="custom-control-label" for="customRadioInline1">5</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+            <label class="form-check-label" for="inlineRadio3">5</label>
         </div>
     </div>
      <label for="">Kehadiran</label>
      <div class="form-group">
-        <div class="custom-control custom-radio custom-control-inline">
-            <label class="custom-control-label" for="customRadioInline1">1</label>
-            <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-            
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option6">
+            <label class="form-check-label" for="inlineRadio1">1</label>
         </div>
-       
-         <div class="custom-control custom-radio custom-control-inline">
-             <label class="custom-control-label" for="customRadioInline1">2</label>
-            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-            
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option7">
+            <label class="form-check-label" for="inlineRadio2">2</label>
         </div>
-         <div class="custom-control custom-radio custom-control-inline">
-             <label class="custom-control-label" for="customRadioInline1">3</label>
-            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-          
+         <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option8">
+            <label class="form-check-label" for="inlineRadio3">3</label>
         </div>
-         <div class="custom-control custom-radio custom-control-inline">
-             <label class="custom-control-label" for="customRadioInline1">4</label>
-            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-          
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option9">
+            <label class="form-check-label" for="inlineRadio3">4</label>
         </div>
-         <div class="custom-control custom-radio custom-control-inline">
-            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-             <label class="custom-control-label" for="customRadioInline1">5</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option10">
+            <label class="form-check-label" for="inlineRadio3">5</label>
         </div>
     </div>
      <label for="">Effort</label>
      <div class="form-group">
-        <div class="custom-control custom-radio custom-control-inline">
-            <label class="custom-control-label" for="customRadioInline1">1</label>
-            <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-            
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option11">
+            <label class="form-check-label" for="inlineRadio1">1</label>
         </div>
-       
-         <div class="custom-control custom-radio custom-control-inline">
-             <label class="custom-control-label" for="customRadioInline1">2</label>
-            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-            
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option12">
+            <label class="form-check-label" for="inlineRadio2">2</label>
         </div>
-         <div class="custom-control custom-radio custom-control-inline">
-             <label class="custom-control-label" for="customRadioInline1">3</label>
-            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-          
+         <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option13">
+            <label class="form-check-label" for="inlineRadio3">3</label>
         </div>
-         <div class="custom-control custom-radio custom-control-inline">
-             <label class="custom-control-label" for="customRadioInline1">4</label>
-            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-          
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option14">
+            <label class="form-check-label" for="inlineRadio3">4</label>
         </div>
-         <div class="custom-control custom-radio custom-control-inline">
-            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-             <label class="custom-control-label" for="customRadioInline1">5</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option15">
+            <label class="form-check-label" for="inlineRadio3">5</label>
         </div>
     </div>
      <label for="">Komitmen</label>
      <div class="form-group">
-        <div class="custom-control custom-radio custom-control-inline">
-            <label class="custom-control-label" for="customRadioInline1">1</label>
-            <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-            
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option16">
+            <label class="form-check-label" for="inlineRadio1">1</label>
         </div>
-       
-         <div class="custom-control custom-radio custom-control-inline">
-             <label class="custom-control-label" for="customRadioInline1">2</label>
-            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-            
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option17">
+            <label class="form-check-label" for="inlineRadio2">2</label>
         </div>
-         <div class="custom-control custom-radio custom-control-inline">
-             <label class="custom-control-label" for="customRadioInline1">3</label>
-            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-          
+         <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option18">
+            <label class="form-check-label" for="inlineRadio3">3</label>
         </div>
-         <div class="custom-control custom-radio custom-control-inline">
-             <label class="custom-control-label" for="customRadioInline1">4</label>
-            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-          
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option19">
+            <label class="form-check-label" for="inlineRadio3">4</label>
         </div>
-         <div class="custom-control custom-radio custom-control-inline">
-            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-             <label class="custom-control-label" for="customRadioInline1">5</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option20">
+            <label class="form-check-label" for="inlineRadio3">5</label>
         </div>
     </div>
     <div class="form-group">
